@@ -23,10 +23,24 @@
       ResourceRegistries/tools/CSSRegistry.py for the latest list of all
       available keys and default values.
       -->
- <stylesheet id="++resource++tbfac.theme.stylesheets/main.css"
+ <stylesheet id="++resource++tbfac.theme.static/main.css"
     title=""
     media="screen" rel="stylesheet" rendering="import"
     cacheable="True" compression="safe" cookable="True"
     enabled="1" expression="" />
+
+ <stylesheet id="dropdown.css"
+    title=""
+    rel="stylesheet" rendering="link"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression="" media="screen"
+    />
+
+ <stylesheet id="masonry.css"
+    title=""
+    rel="stylesheet" rendering="link"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression="" media="screen"
+    />
 
 </object>
