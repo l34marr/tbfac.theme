@@ -5,7 +5,7 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="TaiShin"
+      title="TBFAC Theme"
       directory="profiles/default"
       description="Extension profile for the TaiShin Theme."
       provides="Products.GenericSetup.interfaces.EXTENSION"
