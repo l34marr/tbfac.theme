@@ -1,0 +1,167 @@
+/* uncomment the below selector to get a fixed-width layout. *
+ * 60em is equivalent to 960px in this case, and every       *
+ * grid cell will be 40px with 10px padding.                 */
+
+#visual-portal-wrapper { max-width: 990px; margin: 0 auto; }
+
+.box-more{
+   color:#fff;
+}
+
+#portal-footer {
+    background-color: #FFFFFF;
+    border-top: 2px solid #444;
+    font: 13px "Open Sans","微軟正黑體",sans-serif;
+    width: 100%;
+    padding:0em;
+    padding-top:20px;
+}
+
+/* To change the link color (or the navigation link  background), uncomment *
+ * the selectors below, and insert new color values:                        */
+
+/*
+a:link, a:visited, #content a:link, #content a:visited, dl.portlet a:link, dl.portlet a:visited { 
+    color: red;
+}
+#portal-globalnav .selected a, #portal-globalnav a:hover { 
+    background-color: red;
+}
+*/
+
+/* To change the edit bar color, uncomment the selectors below, and insert *
+ * new color values:                                                        */
+
+/*
+#contentActionMenus,
+dl.actionMenu.activated dd,
+#content-views,
+#edit-bar {
+	background-color: blue;
+	border-color: blue;
+}
+dl.actionMenu a {
+	background-color: blue;
+}
+*/
+
+/* If you want to hide the path bar (aka. breadcrumbs), uncomment the below: */
+
+/*
+#breadcrumbs-you-are-here,
+#breadcrumbs-home,
+#breadcrumbs-current,
+#breadcrumbs-1 {
+    display: none;
+}
+*/
+
+/* If you want variables in the CSS (for example for colors that are used     *
+ * in several locations), Plone has a built-in facility for this. An example  *
+ * is shown below, the variables are defined in the file "base_properties",   *
+ * and below we show the syntax for using them directly in the CSS file.      *
+ * Note that you always need to surround the relevant part (or the entire CSS *
+ * file) with the dtml-with statements for it to work.                        */
+
+/*
+
+/* 
+    #content a:link { color: #436976; }
+*/
+
+
+#portal-breadcrumbs {
+    font-size: 80%;
+    margin-bottom: 1em;
+    margin-left: 0.25em;
+    margin-top: 1em;
+}
+#content {
+    clear: both;
+    font-size: 80%;
+    font-family:"Open Sans","微軟正黑體",sans-serif;
+    line-height: 1.5em;
+
+    margin-left: 4px;
+    margin-top: 2em;
+}
+
+#content p{
+    font-size:1.2em;
+    letter-spacing: 0.05em;
+    /*line-height:1.5em;*/
+}
+
+#content table, #content dl, dl.portlet p, dl.portlet {
+    font-size:12px;
+    font-family:"Open Sans","微軟正黑體",sans-serif;
+
+    margin-bottom: 1em;
+    margin-top: 1.5em;
+}
+#content a:link, dl.portlet a:link {
+    border-bottom: 1px solid #CCCCCC;
+    color: #333;
+}
+#content a:visited, dl.portlet a:visited {
+    border-bottom: 0em solid #CCCCCC;
+    color: #555;
+}
+#content a:hover, dl.portlet a:hover {
+    border-bottom: 1px solid #CCCCCC;
+    color: #dd0000 !important;
+}
+.tileItem {
+
+   padding:5px;
+   border-bottom:1px #ddd dotted;
+   margin-top:10px;
+}
+.tileFooter{
+  font-size:12px;
+  color:#666;
+}
+.tileHeadline{
+   margin-bottom:5px;
+}
+h2 {
+    font-family:"Open Sans","微軟正黑體",sans-serif;
+    letter-spacing:0.05em;
+    font-size: 1.4em;
+    font-weight:normal;
+}
+
+.transparent_widget .uiBoxLightblue {
+    background-color: #AF193F;
+}
+.fcb {
+    color: #FFFFFF;
+}
+.top-info {
+    color: #444;
+    font-family: "Open Sans","微軟正黑體",sans-serif;
+    font-size: 14px;
+    float:right;
+    line-height: 18px;
+    margin-top: 11px;
+    padding-left: 10px;
+    padding-right: 0px;	
+    padding-bottom:10px;
+}
+
+.footer-info {
+    width: 450px;
+}
+.e-mail{
+    background-image: url("img/e-mail.gif");
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    color: #444444;
+    float: right;
+    height: 10px;
+    padding-bottom: 8px;
+    padding-left: 25px;
+}
+.e-mail a:hover{
+    color:#dd0000;
+}
