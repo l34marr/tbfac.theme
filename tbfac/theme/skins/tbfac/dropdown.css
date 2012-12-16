@@ -39,9 +39,9 @@
 }
 #sort-nav {
   line-height: 17px;
-  margin-bottom: 10px;
   margin-left: 0;
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: -15px;
   position: relative;
 }
 #sort-nav ul {
@@ -312,7 +312,7 @@ nav {
   text-transform: uppercase;
   font-size: 15px;
   letter-spacing: 0.05em;
-  margin-right: 30px;
+  margin-right: 50px;
 }
 
 .nav a:hover, .nav li:hover > a {
@@ -380,6 +380,12 @@ nav {
   background: none repeat scroll 0px 0px #eee;
 }
 
+.fb-like {
+  clear: both;
+  float: right;
+  margin-top: -35px;
+}
+
 @media handheld, only screen and (max-width: 767px) {
   body {  }
   header .sprite { background-position: left 120px; }
@@ -393,6 +399,19 @@ nav {
   .nav li li .parent { background-image: url("img/downArrow.png"); background-repeat: no-repeat; background-position: 95% 50%; }
   .nav ul { display: block; width: 100%; }
   .nav > li.hover > ul, .nav li li.hover ul { position: static; }
+  .eng-info {
+    color: #666666;
+    font-family: "Open Sans","微軟正黑體",sans-serif;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: -7px;
+    margin-left: 15px;
+  }
+  .fb-like {
+    clear: both;
+    float: left;
+    margin-top: 20px;
+  }
   body div.columnlayout div { clear: left; display: block; width: 100%; }
   @media not all {
   }
