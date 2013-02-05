@@ -76,41 +76,7 @@ dl.actionMenu a {
     margin-left: 0.25em;
     margin-top: 1em;
 }
-#content {
-    clear: both;
-    font-size: 80%;
-    font-family:"Open Sans","微軟正黑體",sans-serif;
-    line-height: 1.5em;
 
-    margin-left: 4px;
-    margin-top: 2em;
-}
-
-#content p{
-    font-size:1.2em;
-    letter-spacing: 0.05em;
-    /*line-height:1.5em;*/
-}
-
-#content table, #content dl, dl.portlet p, dl.portlet {
-    font-size:12px;
-    font-family:"Open Sans","微軟正黑體",sans-serif;
-
-    margin-bottom: 1em;
-    margin-top: 1.5em;
-}
-#content a:link, dl.portlet a:link {
-    border-bottom: 1px solid #CCCCCC;
-    color: #333;
-}
-#content a:visited, dl.portlet a:visited {
-    border-bottom: 0em solid #CCCCCC;
-    color: #555;
-}
-#content a:hover, dl.portlet a:hover {
-    border-bottom: 1px solid #CCCCCC;
-    color: #dd0000 !important;
-}
 .tileItem {
 
    padding:5px;
