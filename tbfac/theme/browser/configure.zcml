@@ -26,6 +26,14 @@
       />
   -->
 
+  <browser:page
+      for="*"
+      class=".homepage.Homepage"
+      name="homepage"
+      template="homepage.pt"
+      permission="zope2.View"
+      />
+
   <!-- Zope 3 browser resources -->
 
   <!-- Resource directory for stylesheets or images
