@@ -13,7 +13,8 @@
              ajax_load request/ajax_load | nothing;
              ajax_include_head request/ajax_include_head | nothing;
              dummy python:request.RESPONSE.setHeader('X-UA-Compatible', 'IE=edge,chrome=1');"
- tal:attributes="lang lang;">
+ tal:attributes="lang lang;"
+ i18n:domain="tbfac.theme">
   <metal:cache use-macro="context/global_cache_settings/macros/cacheheaders">Get the global cache headers located in global_cache_settings.</metal:cache>
 
   <head>
@@ -94,7 +95,6 @@ $(document).ready(function(){
 
     <div id="portal-top"
          class="row"
-         i18n:domain="plone"
          tal:condition="not:ajax_load">
       <div class="cell width-full position-0">
         <div tal:replace="structure provider:plone.portaltop" />
@@ -106,10 +106,11 @@ $(document).ready(function(){
         <!-- div id="viewlet-above-content" tal:content="structure provider:plone.abovecontent" tal:condition="not:ajax_load" / -->
         <div id="sort-nav">
           <ul>
-            <li class="menu1"><a href="#" data-filter="*" onClick="return false;">全部</a></li>
-            <li class="menu2"><a href="" data-filter=".event ,.forum">藝術動態</a></li>
-            <li class="menu3"><a href="" data-filter=".nominator ,.forum">提名觀察人</a></li>
-            <li class="menu7"><a href="" data-filter=".award ,.others">台新藝術獎＋</a></li>
+  <div class="box-info"><tal:field i18n:translate="">Last Review: </tal:field>
+            <li class="menu1"><a href="#" data-filter="*" onClick="return false;"><tal:field i18n:translate="">All</tal:field></a></li>
+            <li class="menu2"><a href="" data-filter=".event ,.forum"><tal:field i18n:translate="">Events</tal:field></a></li>
+            <li class="menu3"><a href="" data-filter=".nominator ,.forum"><tal:field i18n:translate="">Juries</tal:field></a></li>
+            <li class="menu7"><a href="" data-filter=".award ,.others"><tal:field i18n:translate="">Award+</tal:field></a></li>
           </ul>
         </div>
         <br>
@@ -197,10 +198,15 @@ $(document).ready(function(){
   <h2 class="box-title">2002 - 2012 藝術獎文獻</h2>
 </div>
                     
-<div class="box nominator-color nominator">
+<div class="box nominator-color nominator"
+ tal:define="items python: view.latest_review('ljs');
+             tile python: items[0].getObject()">
   <a href="http://talks.taishinart.org.tw/juries/2013/ljs"><img src="juries/ljs/portrait" alt="" /></a>
   <h2 class="box-title">李俊賢</h2>
-  <div class="box-info"><tal:field i18n:translate="">Last Review: </tal:field>獵山豬‧抓黑熊[還有看老鷹]‧然後藝術──霧台的魯凱藝術家和杜巴男<br>
+  <div class="box-info"><tal:field i18n:translate="">Last Review: </tal:field>
+  <a href="#"
+   tal:attributes="href tile/absolute_url"
+   tal:content="tile/Title">Text</a><br>
   <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/2013/ljs"><img src="pic/more_normal.png"></a></span></div>
 </div>
 
@@ -258,15 +264,20 @@ $(document).ready(function(){
   <h2 class="box-title">佈告欄</h2>
 </div>
                     
-<div class="box nominator-color  nominator">
+<div class="box nominator-color nominator"
+ tal:define="items python: view.latest_review('cts');
+             tile python: items[0].getObject()">
   <a href="http://talks.taishinart.org.tw/juries/2013/cts">
   <img src="juries/cts/portrait" alt="" /></a>
   <h2 class="box-title">陳泰松</h2>
-  <div class="box-info">最新評論：科技、危機與微感裝置 ──談張永達的《感知‧交界》<br>
+  <div class="box-info"><tal:field i18n:translate="">Last Review: </tal:field>
+  <a href="#"
+   tal:attributes="href tile/absolute_url"
+   tal:content="tile/Title">Text</a><br>
   <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/2013/cts"><img src="pic/more_normal.png"></a></span></div>
 </div>
                     
-<div class="box nominator-color  nominator">
+<div class="box nominator-color nominator">
   <a href="http://talks.taishinart.org.tw/juries/2013/ljy">
   <img src="juries/ljy/portrait" alt="" /></a>
   <h2 class="box-title">盧健英</h2>
@@ -288,7 +299,7 @@ $(document).ready(function(){
   <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
                     
-<div class="box nominator-color  nominator">
+<div class="box nominator-color nominator">
   <a href="http://talks.taishinart.org.tw/juries/2013/hyf">
   <img src="juries/hyf/portrait" alt="" /></a>
   <h2 class="box-title">胡永芬</h2>
@@ -310,11 +321,16 @@ $(document).ready(function(){
   <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
                     
-<div class="box nominator-color  nominator">
+<div class="box nominator-color nominator"
+ tal:define="items python: view.latest_review('chj');
+             tile python: items[0].getObject()">
   <a href="http://talks.taishinart.org.tw/juries/2013/chj">
   <img src="juries/chj/portrait" alt="" /></a>
   <h2 class="box-title">陳漢金</h2>
-  <div class="box-info">最新評論：吉他與擊樂的對話<br>
+  <div class="box-info"><tal:field i18n:translate="">Last Review: </tal:field>
+  <a href="#"
+   tal:attributes="href tile/absolute_url"
+   tal:content="tile/Title">Text</a><br>
   <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/2013/chj"><img src="pic/more_normal.png"></a></span></div>
 </div>
 
@@ -340,11 +356,16 @@ $(document).ready(function(){
   <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
                     
-<div class="box nominator-color  nominator">
+<div class="box nominator-color nominator"
+ tal:define="items python: view.latest_review('lyp');
+             tile python: items[0].getObject()">
   <a href="http://talks.taishinart.org.tw/juries/2013/lyp">
   <img src="juries/lyp/portrait" alt="" /></a>
   <h2 class="box-title">林于竝 </h2>
-  <div class="box-info">最新評論：被公共公開的私密慾望<br>
+  <div class="box-info"><tal:field i18n:translate="">Last Review: </tal:field>
+  <a href="#"
+   tal:attributes="href tile/absolute_url"
+   tal:content="tile/Title">Text</a><br>
   <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/2013/lyp"><img src="pic/more_normal.png"></a></span></div>
 </div>
 
@@ -431,7 +452,6 @@ $(document).ready(function(){
     </div>
     <div id="portal-footer-wrapper"
         class="row"
-        i18n:domain="plone"
         tal:condition="not:ajax_load">
       <div class="cell width-full position-0">
         <div tal:replace="structure provider:plone.portalfooter" />

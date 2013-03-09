@@ -45,4 +45,15 @@ class Homepage(BrowserView):
     def latest_review(self, name):
         """ Return Jury's Latest Review
         """
+        context = aq_inner(self.context)
+        catalog = getToolByName(context, 'portal_catalog')
+        portal_state = getMultiAdapter((context, self.request),
+            name=u'plone_portal_state')
+        path = portal_state.navigation_root_path() + '/juries/' + name
+        return catalog(portal_type='tbfac.Review',
+                       review_state='published',
+                       path=path,
+                       sort_on='created',
+                       sort_order='descending',
+                       sort_limit=1)[:1]
 

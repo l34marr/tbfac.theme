@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: tbfac.theme\n"
+"POT-Creation-Date: 2013-03-09 13:19+0000\n"
+"PO-Revision-Date: 2013-03-09 21:23+0800\n"
+"Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: zh-tw\n"
+"Language-Name: Traditional Chinese\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: tbfac.theme\n"
+
+#: ./browser/homepage.pt:110
+msgid "All"
+msgstr "全部"
+
+#: ./browser/homepage.pt:113
+msgid "Award+"
+msgstr "台新藝術獎＋"
+
+#: ./browser/homepage.pt:111
+msgid "Events"
+msgstr "藝術動態"
+
+#: ./browser/homepage.pt:112
+msgid "Juries"
+msgstr "提名觀察人"
+
+#: ./browser/homepage.pt:109
+msgid "Last Review:"
+msgstr "最新評論："
+
