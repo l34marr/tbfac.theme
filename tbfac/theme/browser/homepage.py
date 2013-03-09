@@ -27,21 +27,6 @@ class Homepage(BrowserView):
                        sort_order='ascending',
                        sort_limit=9)[:9]
 
-    def jury_items(self):
-        """ Get Items for Jury Tiles
-        """
-        context = aq_inner(self.context)
-        catalog = getToolByName(context, 'portal_catalog')
-        portal_state = getMultiAdapter((context, self.request),
-            name=u'plone_portal_state')
-        path = portal_state.navigation_root_path() + '/juries/2013'
-        return catalog(portal_type='tbfac.Jury',
-                       review_state='published',
-                       path=path,
-                       sort_on='getObjPositionInParent',
-                       sort_order='ascending',
-                       sort_limit=7)[:7]
-
     def info_items(self):
         """ Get Items for Info Tiles
         """
@@ -56,4 +41,8 @@ class Homepage(BrowserView):
                        sort_on='created',
                        sort_order='descending',
                        sort_limit=12)[:12]
+
+    def latest_review(self, name):
+        """ Return Jury's Latest Review
+        """
 
