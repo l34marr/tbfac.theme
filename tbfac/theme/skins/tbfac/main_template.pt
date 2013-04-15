@@ -2,6 +2,7 @@
 <tal:doctype tal:replace="structure string:&lt;!DOCTYPE html&gt;" />
 
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#"
     tal:define="portal_state context/@@plone_portal_state;
         context_state context/@@plone_context_state;
         plone_view context/@@plone;
@@ -111,11 +112,12 @@ $(document).ready(function(){
 
             <metal:block define-slot="content">
                 <div metal:define-macro="content"
-                    tal:define="show_border context/@@plone/showEditableBorder; show_border python:show_border and not ajax_load"
+                    tal:define="show_border context/@@plone/showEditableBorder; show_border python:show_border and not ajax_load;
+                                isAnon context/@@plone_portal_state/anonymous"
                     tal:attributes="class python:show_border and 'documentEditable' or ''">
 
                     <div id="edit-bar"
-                        tal:condition="show_border"
+                        tal:condition="python: not isAnon and show_border"
                         tal:content="structure provider:plone.contentviews" />
 
                     <div metal:use-macro="context/global_statusmessage/macros/portal_message">
