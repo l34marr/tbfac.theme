@@ -106,7 +106,6 @@ $(document).ready(function(){
         <!-- div id="viewlet-above-content" tal:content="structure provider:plone.abovecontent" tal:condition="not:ajax_load" / -->
         <div id="sort-nav">
           <ul>
-  <div class="box-info"><tal:field i18n:translate="">Last Review: </tal:field>
             <li class="menu1"><a href="#" data-filter="*" onClick="return false;"><tal:field i18n:translate="">All</tal:field></a></li>
             <li class="menu2"><a href="" data-filter=".event ,.forum"><tal:field i18n:translate="">Events</tal:field></a></li>
             <li class="menu3"><a href="" data-filter=".nominator ,.forum"><tal:field i18n:translate="">Juries</tal:field></a></li>
