@@ -88,7 +88,9 @@ $(document).ready(function(){
                   sl python: True;
                   sr python:plone_view.have_portlets('plone.rightcolumn', view);
                   body_class python:plone_view.bodyClass(template, view);
-                  classes python:context.restrictedTraverse('@@sunburstview').getColumnsClasses(view)"
+                  classes python:context.restrictedTraverse('@@sunburstview').getColumnsClasses(view);
+                  fixed view/fixed_items;
+                  infos view/info_items"
     tal:attributes="class body_class;
                     dir python:isRTL and 'rtl' or 'ltr'">
   <div id="visual-portal-wrapper">
@@ -126,8 +128,7 @@ $(document).ready(function(){
                   <!-- Tiles Begin Here -->
                                   
 <div class="box event-color event"
- tal:define="items view/fixed_items;
-             tile python: items[0].getObject()">
+ tal:define="tile python: fixed[0].getObject()">
   <object width="100%" height="250">
     <param value="http://www.youtube.com/v/HBKL8WUdNf8";rel=0";egm=0";showinfo=0";fs=1" name="movie">
     <param value="transparent" name="wmode">
@@ -140,8 +141,7 @@ $(document).ready(function(){
 </div>
 
 <div class="box event-color event"
- tal:define="items view/info_items;
-             tile python: items[0].getObject()">
+ tal:define="tile python: infos[0].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
   <img src="" alt=""
@@ -154,8 +154,7 @@ $(document).ready(function(){
 </div>
 
 <div class="box event-color event"
- tal:define="items view/info_items;
-             tile python: items[1].getObject()">
+ tal:define="tile python: infos[1].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
   <img src="" alt=""
@@ -168,22 +167,29 @@ $(document).ready(function(){
 </div>
                     
 <div class="box event-color event"
- tal:define="items view/fixed_items;
-             tile python: items[1].getObject()">
+ tal:define="tile python: fixed[1].getObject()">
   <a href="#"
    tal:attributes="href tile/url">
   <img src="#" alt=""
    tal:attributes="src string:${tile/absolute_url}/@@download/image;
                    alt string:${tile/Title};
                    width string:230" /></a>
+  <div class="box-date" tal:content="tile/above">Text</div>
   <h2 class="box-title" tal:content="tile/Title">Text</h2>
-  <div class=box-info"></div>
+  <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
-                    
-<div class="box forum-color forum">
-  <a href="#"><img src="pic/message.jpg" alt="" /></a>
-  <h2 class="box-title">最新留言</h2>
-  <div class=box-info"></div>
+
+<div class="box forum-color forum"
+ tal:define="tile python: fixed[2].getObject()">
+  <a href="#"
+   tal:attributes="href tile/url">
+  <img src="#" alt=""
+   tal:attributes="src string:${tile/absolute_url}/@@download/image;
+                   alt string:${tile/Title};
+                   width string:230" /></a>
+  <div class="box-date" tal:content="tile/above">Text</div>
+  <h2 class="box-title" tal:content="tile/Title">Text</h2>
+  <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
                     
 <div class="box nominator-color nominator"
@@ -198,9 +204,18 @@ $(document).ready(function(){
   <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/whw"><img src="pic/more_normal.png"></a></span></div>
 </div>
                     
-<div class="box others-color others">
-  <a target="_blank" href="http://www.dawncreativestudio.com/taishin//keyword#/tag/"><img src="pic/taaa.jpg" alt="藝術獎文獻" /></a>
-  <h2 class="box-title">2002 - 2012 藝術獎文獻</h2>
+<div class="box others-color others"
+ tal:define="tile python: fixed[3].getObject()">
+  <a href="#"
+   tal:attributes="href tile/url;
+                   target string:_blank">
+  <img src="#" alt=""
+   tal:attributes="src string:${tile/absolute_url}/@@download/image;
+                   alt string:${tile/Title};
+                   width string:230"  /></a>
+  <div class="box-date" tal:content="tile/above">Text</div>
+  <h2 class="box-title" tal:content="tile/Title">Text</h2>
+  <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
                     
 <div class="box nominator-color nominator"
@@ -216,8 +231,7 @@ $(document).ready(function(){
 </div>
 
 <div class="box event-color event"
- tal:define="items view/info_items;
-             tile python: items[2].getObject()">
+ tal:define="tile python: infos[2].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
   <img src="" alt=""
@@ -230,8 +244,7 @@ $(document).ready(function(){
 </div>
 
 <div class="box event-color event"
- tal:define="items view/info_items;
-             tile python: items[3].getObject()">
+ tal:define="tile python: infos[3].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
   <img src="" alt=""
@@ -243,15 +256,21 @@ $(document).ready(function(){
   <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
                     
-<div class="box others-color others">
-  <a href="http://talks.taishinart.org.tw/award/current">
-  <img src="pic/taishinaward icon.jpg" alt="台新藝術獎" /></a>
-  <h2 class="box-title">台新藝術獎</h2>
+<div class="box others-color others"
+ tal:define="tile python: fixed[4].getObject()">
+  <a href="#"
+   tal:attributes="href tile/url">
+  <img src="#" alt=""
+   tal:attributes="src string:${tile/absolute_url}/@@download/image;
+                   alt string:${tile/Title};
+                   width string:230" /></a>
+  <div class="box-date" tal:content="tile/above">Text</div>
+  <h2 class="box-title" tal:content="tile/Title">Text</h2>
+  <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
 
 <div class="box event-color event"
- tal:define="items view/info_items;
-             tile python: items[4].getObject()">
+ tal:define="tile python: infos[4].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
   <img src="" alt=""
@@ -263,10 +282,17 @@ $(document).ready(function(){
   <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
                     
-<div class="box others-color others">
-  <a href="http://talks.taishinart.org.tw/award/bulletin">
-  <img src="pic/bulletin.jpg" alt="" /></a>
-  <h2 class="box-title">佈告欄</h2>
+<div class="box others-color others"
+ tal:define="tile python: fixed[5].getObject()">
+  <a href="#"
+   tal:attributes="href tile/url">
+  <img src="#" alt=""
+   tal:attributes="src string:${tile/absolute_url}/@@download/image;
+                   alt string:${tile/Title};
+                   width string:230" /></a>
+  <div class="box-date" tal:content="tile/above">Text</div>
+  <h2 class="box-title" tal:content="tile/Title">Text</h2>
+  <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
                     
 <div class="box nominator-color nominator"
@@ -296,8 +322,7 @@ $(document).ready(function(){
 </div>
 
 <div class="box event-color event"
- tal:define="items view/info_items;
-             tile python: items[5].getObject()">
+ tal:define="tile python: infos[5].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
   <img src="" alt=""
@@ -323,8 +348,7 @@ $(document).ready(function(){
 </div>
                     
 <div class="box event-color event"
- tal:define="items view/info_items;
-            tile python: items[6].getObject()">
+ tal:define="tile python: infos[6].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
   <img src="" alt=""
@@ -349,17 +373,21 @@ $(document).ready(function(){
   <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/chj"><img src="pic/more_normal.png"></a></span></div>
 </div>
 
-<div class="box event-color event">
-  <a href="http://talks.taishinart.org.tw/event/talks">
-  <img src="pic/discuss.jpg" alt="藝論紛紛" /></a>
-  <h2 class="box-title">藝論紛紛</h2>
-  <div class="box-info">藝文觀察評論<br>
-  <span class="box-more"><a href="http://talks.taishinart.org.tw/event/talks"><img src="pic/more_normal.png"></a></span></div>
+<div class="box event-color event"
+ tal:define="tile python: fixed[6].getObject()">
+  <a href="#"
+   tal:attributes="href tile/url">
+  <img src="#" alt=""
+   tal:attributes="src string:${tile/absolute_url}/@@download/image;
+                   alt string:${tile/Title};
+                   width string:230" /></a>
+  <div class="box-date" tal:content="tile/above">Text</div>
+  <h2 class="box-title" tal:content="tile/Title">Text</h2>
+  <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
 
 <div class="box event-color event"
- tal:define="items view/info_items;
-            tile python: items[7].getObject()">
+ tal:define="tile python: infos[7].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
   <img src="" alt=""
@@ -385,8 +413,7 @@ $(document).ready(function(){
 </div>
 
 <div class="box event-color event"
- tal:define="items view/info_items;
-            tile python: items[8].getObject()">
+ tal:define="tile python: infos[8].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
   <img src="" alt=""
@@ -399,8 +426,7 @@ $(document).ready(function(){
 </div>
 
 <div class="box event-color event"
- tal:define="items view/info_items;
-            tile python: items[9].getObject()">
+ tal:define="tile python: infos[9].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
   <img src="" alt=""
@@ -413,8 +439,7 @@ $(document).ready(function(){
 </div>
 
 <div class="box event-color event"
- tal:define="items view/info_items;
-            tile python: items[10].getObject()">
+ tal:define="tile python: infos[10].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
   <img src="" alt=""
@@ -427,8 +452,7 @@ $(document).ready(function(){
 </div>
 
 <div class="box event-color event"
- tal:define="items view/info_items;
-            tile python: items[11].getObject()">
+ tal:define="tile python: infos[11].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
   <img src="" alt=""
@@ -440,16 +464,32 @@ $(document).ready(function(){
   <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
 
-<div class="box others-color others">
-  <a target="_blank" href="https://www.facebook.com/pages/%E5%8F%B0%E6%96%B0%E8%97%9D%E8%A1%93%E7%8D%8ETaishin-Arts-Award/56741313373?ref=hl">
-  <img src="pic/fb icon.jpg" alt="藝術獎facebook" /></a>
-  <h2 class="box-title">藝術獎facebook</h2>
+<div class="box others-color others"
+ tal:define="tile python: fixed[7].getObject()">
+  <a href="#"
+   tal:attributes="href tile/url;
+                   target string:_blank">
+  <img src="#" alt=""
+   tal:attributes="src string:${tile/absolute_url}/@@download/image;
+                   alt string:${tile/Title};
+                   width string:230" /></a>
+  <div class="box-date" tal:content="tile/above">Text</div>
+  <h2 class="box-title" tal:content="tile/Title">Text</h2>
+  <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
                      
-<div class="box others-color others">
-  <a target="_blank" href="http://www.taishinart.org.tw/">
-  <img src="pic/foundation.jpg" alt="台新銀行文化藝術基金會" /></a>
-  <h2 class="box-title">台新銀行文化藝術基金會</h2>
+<div class="box others-color others"
+ tal:define="tile python: fixed[8].getObject()">
+  <a href="#"
+   tal:attributes="href tile/url;
+                   target string:_blank">
+  <img src="#" alt=""
+   tal:attributes="src string:${tile/absolute_url}/@@download/image;
+                   alt string:${tile/Title};
+                   width string:230" /></a>
+  <div class="box-date" tal:content="tile/above">Text</div>
+  <h2 class="box-title" tal:content="tile/Title">Text</h2>
+  <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
 
                   <!-- Tiles End Here -->                     
