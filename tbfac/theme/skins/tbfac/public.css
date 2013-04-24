@@ -2299,4 +2299,10 @@ a.historyComparePrevious span {
 #noTagsSelected, #oneOrMoreTagsSelected {
     display: none;
 }
+
+/* SocialTools */
+.disqus-comments-counter {
+  float: left;
+}
+
 /* @end */
