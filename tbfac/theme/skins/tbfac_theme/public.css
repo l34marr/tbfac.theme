@@ -1508,6 +1508,7 @@ form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
 }
 #searchResultsSort{
 	float:right;
+    display: none; /* https://github.com/l34marr/tbfac.policy/commit/da4794ff90f36b90d7e89fddb4ea6f35a6a11fe9 */
 }
 #search-results-bar {
     color:#666;
@@ -1522,6 +1523,7 @@ form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
 }
 #search-results-bar dl.actionMenu {
     margin-bottom: 0;
+    display: none; /* https://github.com/l34marr/tbfac.policy/commit/da4794ff90f36b90d7e89fddb4ea6f35a6a11fe9 */
 }
 #search-results-bar dd.actionMenuContent {
     margin-left: 0;
