@@ -15,9 +15,9 @@
       of your product (on the filesystem) as Filesystem Directory Views within
       the portal_skins tool, so that they become usable as skin layers.
       -->
- <object name="tbfac"
+ <object name="tbfac_theme"
     meta_type="Filesystem Directory View"
-    directory="tbfac.theme:skins/tbfac" />
+    directory="tbfac.theme:skins/tbfac_theme" />
 
  <!-- A skin-path in this file corresponds to a Skin Selection in the
      'Properties' tab of the portal_skins tool, in the ZMI.
@@ -32,7 +32,7 @@
        "all".
        -->
  <skin-path name="TaiShin" based-on="Sunburst Theme">
-  <layer name="tbfac" insert-after="custom" />
+  <layer name="tbfac_theme" insert-after="custom" />
  </skin-path>
 
 </object>

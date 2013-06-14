@@ -4,7 +4,7 @@
     i18n_domain="tbfac.theme">
 
   <!-- File System Directory Views registration -->
-  <cmf:registerDirectory name="tbfac" />
+  <cmf:registerDirectory name="tbfac_theme" />
 
   <!-- Note: This could also be done for all folders at once
        by replacing the previous lines with this one:
