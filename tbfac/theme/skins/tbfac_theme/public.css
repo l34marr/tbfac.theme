@@ -32,7 +32,7 @@ iframe { border-width: 0; border-style:none; }
 body {
     font: 100% "Open Sans","微軟正黑體",sans-serif;
     background: White;
-    color:#333;
+    color:#222;
     /* width: 58em; margin: 1em auto; */
 }
 
@@ -46,7 +46,8 @@ h1, h2 {
     letter-spacing: -0.05em;
 }
 h1 {
-    font-size: 1.7em;
+    font-size: 1.65em;
+    margin-bottom:7px;
 }
 h2 {
     font-size: 1.5em;
@@ -58,6 +59,7 @@ h4 {
     font-size: 1.25em;
 }
 h5 {
+    
     font-size: 1em;
 }
 h6 {
@@ -73,14 +75,16 @@ h2 a, h3 a, h4 a {
 p {
 }
 
-a:link, a:visited {
-    color: #555;
+a:link {
+    color: #666;
 }
 
 a:hover {
-    color: #dd0000;
+    color: #cc0000;
 }
-
+a:visited {
+    color: #666;
+}
 a:focus img {
     outline: thin dotted;
 }
@@ -103,11 +107,23 @@ q {
 #portal-header {
     position: relative;
     z-index: 2;
+
+overflow: visible;
+margin-left: 0;
+margin-right: 0;
+min-width: 0;
+padding-left: 0;
+padding-right: 0;
+width: 100%;
+
+
+
 }
 
 #portal-logo {
     display: inline-block;
-    margin: 1.375em 0;
+    margin-top:10px;
+    margin-bottom:5px;
 }
 /* removes extra space above logo in IE6 and IE7 */
 /* .ie6 and .ie7 is set on <html> by Modernizr library */
@@ -187,6 +203,7 @@ q {
 }
 
 #portal-searchbox {
+    font-family:"Open Sans","微軟正黑體",sans-serif;
     float: right;
     text-align: left;
     clear: right;
@@ -203,7 +220,8 @@ q {
 }
 
 #searchGadget {
-    width: 13.5em;
+
+    width: 14em;
     font-family:"Open Sans","微軟正黑體",sans-serif;
     font-size: 14px;
     height: 20px;
@@ -221,7 +239,7 @@ q {
 }
 .LSBox input.searchButton a:hover{
 
-    color: #dd0000;
+    color: #cc0000;
 }
 
 .LSBox .searchSection {
@@ -363,9 +381,13 @@ dl.portletError {
 
 dl.portlet dt,
 div.portletAssignments div.portletHeader {
-    padding: 0.42em 1em;
-    background: #ddd;
+    font-size: 14px;
+   /* text-shadow:1px 1px 0 #888;*/
+    padding: 0.22em 0.5em;
+    background: #bbb;
     line-height: normal;
+    color:#fff;
+    margin-bottom:1px;
 }
 dl.portlet dt.hiddenStructure {
     padding: 0;
@@ -393,7 +415,7 @@ div.portletAssignments .managedPortletActions form {
 dl.portlet dt a:link,
 dl.portlet dt a:visited,
 dl.portlet dt a:hover {
-    color: black;
+    color:#fff;
     display: block;
     border: none;
 }
@@ -401,7 +423,7 @@ dl.portlet dt a:hover {
 dl.portlet dd.portletItem,
 dl.portlet dd.portletFooter,
 dl.portletError dd {
-    padding: 1em;
+    padding: 5px;
 }
 
 
@@ -411,8 +433,8 @@ a.managePortletsFallback {
     text-align: center;
     padding: 0.25em 0.5em;
     font-size: 80%;
-    margin: 0 auto 1em;
-    background: #ddd;
+    margin: 1em auto 1em;
+    background: #B0E152;
     border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
     -moz-border-radius: 0.5em;
@@ -484,9 +506,11 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 #content {
     line-height: 1.5em;
     clear: both;
-    font-size: 80%;
+    font-size: 95%;
+    letter-spacing:0.05em;
     margin: 1em 0.25em 2em 0.25em;
 }
+
 
 /* Special case of #content - TinyMCE */
 body#content {
@@ -516,15 +540,12 @@ dl.portlet {
 
 #content a:link,
 dl.portlet a:link {
-    color: #205c90;
-    border-bottom: 0.1em solid #ccc;
+    color: #0462b4;
+   
+    border-bottom: 0em solid #ccc;
 }
 
-#content a:visited,
-dl.portlet a:visited {
-    color: #427597;
-    border-bottom: 0.1em solid #ccc;
-}
+
 #content a:hover,
 dl.portlet a:hover {
     color: #75ad0a !important; /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
@@ -545,17 +566,17 @@ dl.portlet a:hover {
 }
 
 #category a.link-category, span.selectedTag {
-    color: black;
+    color: #fff;
     padding: 0.25em 0.5em;
-    background: #ddd;
+    background: #75AD0A;
     border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
     -moz-border-radius: 0.5em;
 }
 #category a.link-category:hover {
-    background: #205c90;
+    background: #cc0000;
     color: White;
-    border-color: #205c90;
+    border-color: #cc0000;
 }
 #category .separator {
     display: none;
@@ -563,7 +584,7 @@ dl.portlet a:hover {
 
 #content ul {
     list-style-type: disc;
-    margin-left: 2em;
+    /*margin-left: 2em;*/
 }
 
 #content ol,
@@ -576,7 +597,8 @@ div.portletStaticText ol {
 #content li,
 dl.portlet li,
 div.portletStaticText li {
-    margin-bottom: 0.25em;
+    font-size:1.1em;
+    /*margin-bottom: 0.25em;*/
     line-height: 1.5em;
     display: list-item;
 }
@@ -587,7 +609,8 @@ div.portletStaticText li {
     margin-right: 0;
 }
 #content dd {
-    margin: 0 0 1em 2em;
+   /*border-bottom:1px #d1d1d1 dotted;*/
+    margin: 0 0 0.2em 1.2em;
 }
 
 #content pre {
@@ -645,6 +668,7 @@ div.portletStaticText li {
 
 
 #content table {
+    clear: left;
     text-align: left;
     border-collapse: collapse;
     border-spacing: 0px;
@@ -652,9 +676,10 @@ div.portletStaticText li {
 
 #content .documentDescription,
 #content #description {
-    color: #666;
+    letter-spacing: 0.1em;
+    margin-bottom:15px;
     margin-left: 0;
-    font: bold 1.25em "Helvetica Neue", Arial, FreeSans, sans-serif;
+    font: normal 1em "Open Sans","微軟正黑體",sans-serif;
 }
 
 #content img.tileImage,
@@ -758,10 +783,10 @@ table.listing .top {
 }
 table.listing th {
     text-align: left;
-    color: #666;
-    border: 0.1em solid #e7e7e7;
+    color: #333;
+    border: 0.1em solid #eee;
     border-style: solid solid none;
-    background: #ddd;
+    background: #CFD2D4;
 }
 table.listing tr.odd th {
     border: 0.1em solid #fff;
@@ -826,29 +851,35 @@ table.grid th {
 }
 
 div.listingBar {
-    font-size: 80%;
+    font-size: 13px;
     margin: 1em 0;
+    padding-top: 15px;
 }
 
 div.listingBar .next {
     display: inline-block;
     float: right;
+    margin-bottom: 8px;
+    border: 1px #ddd solid;
 }
 
 div.listingBar .previous {
     display: inline-block;
+    margin-bottom: 8px;
+    border: 1px #ddd solid;
 }
 
 div.listingBar a {
+    background-color: #EEEEEE;
     display: inline-block;
     padding: 0.25em 0.5em;
-    border: 0.1em solid #ccc;
 }
 
 div.listingBar a:hover {
-    color: White;
-    background-color: #329fd7;
-    border-color: #329fd7;
+    color: #cc0000;
+    border-color: #fff;
+
+
 }
 
 /* @end */
@@ -926,8 +957,8 @@ dl.error dd {
 
 /* Color differences between the two tab types */
 #content ul.formTabs {
-    background-color: #ddd;
-    border: 0.3em solid #ddd;
+    background-color: #eee;
+    border: 0.3em solid #eee;
 }
 #edit-bar {
     background-color: #75ad0a;
@@ -957,17 +988,19 @@ dl.error dd {
     display: block;
     border-style: solid solid none solid;
     margin-left: 0;
-    border-top-right-radius: 0.5em;
-    border-top-left-radius: 0.5em;
-    -webkit-border-top-right-radius: 0.5em;
-    -webkit-border-top-left-radius: 0.5em;
-    -moz-border-radius-topleft: 0.5em;
-    -moz-border-radius-topright: 0.5em;
+    margin-top:10px;
+    border-top-right-radius: 0.3em;
+    border-top-left-radius: 0.3em;
+    -webkit-border-top-right-radius: 0.3em;
+    -webkit-border-top-left-radius: 0.3em;
+    -moz-border-radius-topleft: 0.3em;
+    -moz-border-radius-topright: 0.3em;
 }
 #content li.formTab,
 #content-core li.formTab {
     display: inline;
     margin-right:0.25em;
+    font-size:15px;
 }
 #content-views a,
 #content li.formTab a,
@@ -997,12 +1030,12 @@ dl.error dd {
 #content-core li.formTab a:hover {
     background: White;
     color: Black;
-    border-top-right-radius: 0.5em;
-    border-top-left-radius: 0.5em;
-    -webkit-border-top-right-radius: 0.5em;
-    -webkit-border-top-left-radius: 0.5em;
-    -moz-border-radius-topleft: 0.5em;
-    -moz-border-radius-topright: 0.5em;
+    border-top-right-radius: 0.3em;
+    border-top-left-radius: 0.3em;
+    -webkit-border-top-right-radius: 0.3em;
+    -webkit-border-top-left-radius: 0.3em;
+    -moz-border-radius-topleft: 0.3em;
+    -moz-border-radius-topright: 0.3em;
 }
 #content li.formTab a.notify,
 #content-core li.formTab a.notify {
@@ -1079,7 +1112,7 @@ div.field span.required:after {
     color: #666;
 }
 #contentActionMenus dl.actionMenu {
-    line-height: 2em;
+    line-height: 1.9em;
 }
 
 #folderHeader, #contextHeader {
@@ -1174,11 +1207,11 @@ dl.actionMenu.activated dd div {
     border: none;
 }
 #content ul.configlets li a:visited {
-    color: #436976;
+    color: #0462b4;
     background-color: transparent;
 }
 #content ul.configlets li a:active {
-    color: #436976;
+    color: #0462b4;
     background-color: transparent;
 }
 #content ul.configlets li label {
@@ -1419,7 +1452,8 @@ fieldset#search-field {
     text-align: center;
 }
 input.searchPage {
-    font-size:200% !important;
+   font:120% "Open Sans","微軟正黑體",sans-serif;
+   /*font-size:200% !important;*/
 }
 #rss-subscription {
 	float: left;
@@ -1476,13 +1510,15 @@ form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
 	float:right;
 }
 #search-results-bar {
+    color:#666;
+    background-color:#eee;
     position: relative;
     z-index: 1;
     float: left;
-    width: 100%;
-    border-top: 1px solid #DDD;
-    border-bottom: 1px solid #DDD;
-    padding: 1em 0;
+    width: 97%;
+    /*border-top: 1px solid #DDD;*/
+    /*border-bottom: 1px solid #DDD;*/
+    padding: 1em;
 }
 #search-results-bar dl.actionMenu {
     margin-bottom: 0;
@@ -1498,7 +1534,8 @@ form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
 	content: " ▼";
 }
 #search-results {
-    padding: 1em;
+    /*padding: 1em;*/
+    padding-top:1em;
 }
 .searchResults {
     margin-top: 0;
@@ -1522,6 +1559,8 @@ form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
 }
 .image-inline {
    float: none;
+   width:100%;
+   height:auto;
 }
 /*note: the tricky thing here is that image-inline|image-left|image-right
 can both be on an image and a wrapper element e.g. a dl tag*/
@@ -1601,22 +1640,22 @@ fieldset,
 /* Emulates the styling from the h1 tag */
 #content .field input[type="text"][name$=".title"],
 #archetypes-fieldname-title input {
-    font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
+    font-family: "Open Sans","微軟正黑體",sans-serif;
     line-height: 125%;
     color: Black;
     letter-spacing: -0.05em;
     margin: inherit -0.05em;
-    font-size: 2em; /* 26px equiv */
-    font-weight: bold;
+    font-size: 1em; /* 26px equiv */
+    font-weight: normal;
 }
 
 /* Emulates styling from the description's view */
 #content .field textarea[name$=".description"],
 #archetypes-fieldname-description textarea#description {
-    font-family: Arial,FreeSans,sans-serif;
-    color:#666666;
-    font-size:1.25em;
-    font-weight: bold;
+    font-family: "Open Sans","微軟正黑體",sans-serif;
+    color:#000;
+    font-size:1em;
+    font-weight: normal;
 }
 
 
@@ -1630,10 +1669,11 @@ textarea:focus {
 }
 
 #content textarea {
-    font: 100% Monaco, "Courier New", Courier, monospace;
+    font: 100% "Open Sans","微軟正黑體",sans-serif;
     width: 100%;
 }
 #content select {
+    font-family: "Open Sans","微軟正黑體",sans-serif;
     vertical-align: top;
 }
 #content fieldset {
@@ -1665,7 +1705,7 @@ label {
 }
 dl.enableFormTabbing dd {
     margin-left: 0;
-    padding-top: 2em;
+    padding-top: 1em;
 }
 .searchSection {
     color: #76797c;
@@ -2173,25 +2213,25 @@ a.historyComparePrevious span {
 */
 
 .icons-on .contenttype-document {
-    background: no-repeat transparent 0px 4px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px 7px url(contenttypes-sprite.png);
 }
 .icons-on .contenttype-event {
     background: no-repeat transparent 0px -212px url(contenttypes-sprite.png);
 }
 .icons-on .contenttype-folder {
-    background: no-repeat transparent 0px -644px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -641px url(contenttypes-sprite.png);
 }
 .icons-on .contenttype-link {
-    background: no-repeat transparent 0px -1076px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1072px url(contenttypes-sprite.png);
 }
 .icons-on .contenttype-news-item {
-    background: no-repeat transparent 0px -1292px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1288px url(contenttypes-sprite.png);
 }
 .icons-on .contenttype-plone-site {
     background: no-repeat transparent 0px -1508px url(contenttypes-sprite.png);
 }
 .icons-on .contenttype-collection {
-    background: no-repeat transparent 0px -1724px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1720px url(contenttypes-sprite.png);
 }
 .icons-on .contenttype-topic {
     background: no-repeat transparent 0px -1724px url(contenttypes-sprite.png);
@@ -2299,10 +2339,4 @@ a.historyComparePrevious span {
 #noTagsSelected, #oneOrMoreTagsSelected {
     display: none;
 }
-
-/* SocialTools */
-.disqus-comments-counter {
-  float: left;
-}
-
 /* @end */
