@@ -1151,3 +1151,7 @@ cite{
 .comment-notes {
     margin-left:30px;
 }
+
+div.fbLikeCounter {
+  float: right;
+}
