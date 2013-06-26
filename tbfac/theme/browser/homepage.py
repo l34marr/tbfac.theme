@@ -50,7 +50,7 @@ class Homepage(BrowserView):
         portal_state = getMultiAdapter((context, self.request),
             name=u'plone_portal_state')
         path = portal_state.navigation_root_path() + '/juries/' + name
-        return catalog(portal_type='tbfac.Review',
+        return catalog(portal_type=['tbfac.Review','tbfac.Quarterly'],
                        review_state='published',
                        path=path,
                        sort_on='created',
