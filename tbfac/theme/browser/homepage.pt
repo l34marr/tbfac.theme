@@ -307,18 +307,31 @@ $(document).ready(function(){
    tal:content="tile/Title">Text</a><br>
   <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/cts"><img src="pic/more_normal.png"></a></span></div>
 </div>
-                    
+
 <div class="box nominator-color nominator"
  tal:define="items python: view.latest_review('ljy');
              tile python: items[0].getObject()">
   <a href="http://talks.taishinart.org.tw/juries/ljy">
   <img src="juries/ljy/portrait" alt="" /></a>
-  <h2 class="box-title">盧健英 | 最新評論</h2>
+  <h2 class="box-title">盧健英(第一、二季委員) | 最新評論</h2>
   <div class="box-info">
   <a href="#"
    tal:attributes="href tile/absolute_url"
    tal:content="tile/Title">Text</a><br>
   <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/ljy"><img src="pic/more_normal.png"></a></span></div>
+</div>
+
+<div class="box nominator-color nominator"
+ tal:define="items python: view.latest_review('jhl');
+             tile python: items[0].getObject()">
+  <a href="http://talks.taishinart.org.tw/juries/jhl">
+  <img src="juries/jhl/portrait" alt="" /></a>
+  <h2 class="box-title">紀慧玲(第三、四季委員) | 最新評論</h2>
+  <div class="box-info">
+  <a href="#"
+   tal:attributes="href tile/absolute_url"
+   tal:content="tile/Title">Text</a><br />
+  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/jhl"><img src="pic/more_normal.png"></a></span></div>
 </div>
 
 <div class="box event-color event"
