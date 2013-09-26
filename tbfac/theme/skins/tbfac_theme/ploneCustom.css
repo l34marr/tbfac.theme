@@ -168,7 +168,7 @@ h2 {
 
 .footer-info {
     display: inline-block;
-    width: 60%;
+    width: 70%;
 }
 
 .contactinfo{
@@ -202,6 +202,14 @@ h2 {
 }
 .e-mail a:hover{
     color:#cc0000;
+}
+.help {
+  background-image: url("pic/help.png");
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  color: #444444;
+  padding-left: 17px;
+  margin-left: 10px;
 }
 .recommendAction{
     background: none repeat scroll 0 0 #ECEEF5;
@@ -935,6 +943,7 @@ cite{
   clear: both;
   float: left;
   margin-right: 15px;
+  padding-bottom: 10px;
 }
 .tsholding{
   clear: both;
@@ -1145,13 +1154,11 @@ cite{
     margin-bottom: 1px;
     margin-right: -2px;
 }
-.comment-notes li {
-    margin-bottom: 10px;
-}
-.comment-notes {
-    margin-left:30px;
-}
 
 div.fbLikeCounter {
   float: right;
+}
+
+.disqus-img {
+  width: auto;
 }

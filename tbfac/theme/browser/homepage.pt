@@ -523,7 +523,6 @@ $(document).ready(function(){
         tal:condition="not:ajax_load">
       <div class="cell width-full position-0">
         <div tal:replace="structure provider:plone.portalfooter" />
-        <div id="kss-spinner"> <img tal:attributes="src string:${portal_url}/spinner.gif" alt="" /> </div>
       </div>
     </div>
     <script>window.jQuery || document.write('<script src="++resource++plone.app.jquery.js"><\/script>')</script> 
