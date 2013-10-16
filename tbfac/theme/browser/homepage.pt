@@ -179,7 +179,7 @@ $(document).ready(function(){
   <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
 
-<div class="box others-color others"
+<div class="box nominator-color nominator"
  tal:define="tile python: fixed[2].getObject()">
   <a href="#"
    tal:attributes="href tile/url">
