@@ -2,7 +2,8 @@
 <tal:doctype tal:replace="structure string:&lt;!DOCTYPE html&gt;" />
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:fb="http://ogp.me/ns/fb#"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml"
     tal:define="portal_state context/@@plone_portal_state;
         context_state context/@@plone_context_state;
         plone_view context/@@plone;
@@ -42,6 +43,7 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=0.6666, maximum-scale=1.0, minimum-scale=0.6666" />
         <meta name="generator" content="Plone - http://plone.org" />
+        <meta property="og:image" content="http://talks.taishinart.org.tw/logo.png" />
     </tal:notajax>
     <script src="modernizr-2.6.1-respond-1.1.0.min.js"></script>
     <script type="text/javascript">
@@ -132,6 +134,8 @@ $(document).ready(function(){
                             </metal:header>
 
                             <metal:bodytext define-slot="main">
+
+                            <div id="fb-root"></div>
 
                              <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
                              <metal:title define-slot="content-title">

@@ -1,6 +1,8 @@
 <metal:page define-macro="master">
   <tal:doctype tal:replace="structure string:&lt;!DOCTYPE html&gt;" />
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml"
  tal:define="portal_state context/@@plone_portal_state;
              context_state context/@@plone_context_state;
              plone_view context/@@plone;
@@ -28,6 +30,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Open+Sans+Condensed:300|Lora">
   <link tal:replace="structure provider:plone.htmlhead.links" />
   <link media="screen" rel="stylesheet" type="text/css" href="media-handheld.css">
+  <link rel="image_src" type="image/png" href="http://talks.taishinart.org.tw/logo.png" />
   <tal:comment replace="nothing">
   Various slots where you can insert elements in the header from a template.
   </tal:comment>
@@ -37,6 +40,7 @@
   <metal:javascriptslot define-slot="javascript_head_slot" />
   <meta name="viewport" content="width=device-width, initial-scale=0.6666, maximum-scale=1.0, minimum-scale=0.6666" />
   <meta name="generator" content="Plone - http://plone.org" />
+  <meta property="og:image" content="http://talks.taishinart.org.tw/logo.png" />
   </tal:notajax>
   <script src="modernizr.min.js"></script>
   <script src="isotope.js" type="text/javascript"></script>
@@ -309,16 +313,16 @@ $(document).ready(function(){
 </div>
 
 <div class="box nominator-color nominator"
- tal:define="items python: view.latest_review('ljy');
+ tal:define="items python: view.latest_review('lyp');
              tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/ljy">
-  <img src="juries/ljy/portrait" alt="" /></a>
-  <h2 class="box-title">盧健英(第一、二季委員) | 最新評論</h2>
+  <a href="http://talks.taishinart.org.tw/juries/lyp">
+  <img src="juries/lyp/portrait" alt="" /></a>
+  <h2 class="box-title">林于竝 | 最新評論</h2>
   <div class="box-info">
   <a href="#"
    tal:attributes="href tile/absolute_url"
    tal:content="tile/Title">Text</a><br>
-  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/ljy"><img src="pic/more_normal.png"></a></span></div>
+  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/lyp"><img src="pic/more_normal.png"></a></span></div>
 </div>
 
 <div class="box nominator-color nominator"
@@ -411,18 +415,18 @@ $(document).ready(function(){
   <h2 class="box-title" tal:content="tile/Title">Text</h2>
   <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
-                    
+
 <div class="box nominator-color nominator"
- tal:define="items python: view.latest_review('lyp');
+ tal:define="items python: view.latest_review('ljy');
              tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/lyp">
-  <img src="juries/lyp/portrait" alt="" /></a>
-  <h2 class="box-title">林于竝 | 最新評論</h2>
+  <a href="http://talks.taishinart.org.tw/juries/ljy">
+  <img src="juries/ljy/portrait" alt="" /></a>
+  <h2 class="box-title">盧健英(第一、二季委員) | 最新評論</h2>
   <div class="box-info">
   <a href="#"
    tal:attributes="href tile/absolute_url"
    tal:content="tile/Title">Text</a><br>
-  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/lyp"><img src="pic/more_normal.png"></a></span></div>
+  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/ljy"><img src="pic/more_normal.png"></a></span></div>
 </div>
 
 <div class="box event-color event"
