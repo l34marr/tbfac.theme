@@ -1,0 +1,44 @@
+<nav id="mainMenu" class="tencol last">
+ <a class="toggleMenu" href="#" style="display: none;">Menu <span class="expandicon"><img src="http://talks.taishinart.org.tw/pic/menu-expand.png"></span></a>
+  <ul class="nav"
+   tal:define="root_url context/@@plone_portal_state/navigation_root_url;
+               isAnon context/@@plone_portal_state/anonymous" >
+   <li class="">
+    <a class="rootmenulink" href="#" tal:attributes="href string:${root_url}/event/info">藝術動態<span class="eng-info" style="cursor: default">Arts Radar</span></a> 
+   </li>
+   <li class="">
+    <a class="rootmenulink" href="#" tal:attributes="href string:${root_url}/event/talks">藝論紛紛<span class="eng-info" style="cursor: default">Post Your Comment</span></a> 
+   </li>
+   <li class="">
+    <a class="rootmenulink parent"  href="#" tal:attributes="href string:${root_url}/juries/current">提名觀察人<span class="eng-info" style="cursor: default">Nominators</span></a>     
+    <ul class="submenu">
+     <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/juries/current">現任(第十三屆)</a></li>
+     <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/juries/2013">第十二屆</a></li>
+     <!--    <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/juries/past">歷屆</a> </li>    -->
+    </ul>
+   </li>
+
+   <li class=""><a class="rootmenulink parent"  href="#" tal:attributes="href string:${root_url}/award/about">台新藝術獎<span class="eng-info" style="cursor: default">Taishin Arts Award</span></a>     
+    <ul class="submenu">
+     <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/award/bulletin">佈告欄</a> </li>
+     <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/award/award-12/current">第十二屆台新藝術獎</a> </li>
+     <li class="menuitem"><a class="menulink" href="http://www.taishinart.org.tw/chinese/2_taishinarts_award/3_award_review.php?MID=3" target="_blank">歷屆</a> </li>
+     <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/award/about">關於台新藝術獎</a> </li>
+     <li class="menuitem"><a class="menulink" href="http://www.taishinart.org.tw/chinese/2_taishinarts_award/6_page_sub.php?MID=7" target="_blank">台北愛樂藝術相對論</a> </li>
+     <li class="menuitem"><a class="menulink" href="http://www.taishinart.org.tw/chinese/2_taishinarts_award/4_commentary_list.php?MID=4" target="_blank">藝評專區</a> </li>
+     <li class="menuitem"><a class="menulink" href="http://www.taishinart.org.tw/chinese/2_taishinarts_award/5_famous_list.php?MID=5" target="_blank">台新名人榜</a> </li>
+    </ul>
+   </li>
+
+   <li class=""><a class="rootmenulink" href="#" tal:attributes="href string:${root_url}/forum">Art＆ _____<span class="eng-info" style="cursor: default">Forum</span></a>   
+   </li>
+
+   <li id="mini-searchbox" class="displayNav">
+    <form action="http://talks.taishinart.org.tw/search" name="searchform">
+     <input type="text" class="searchField inputLabel inputLabelActive" title="Search" value="" size="18" name="SearchableText">
+     <button value="label_search" type="submit" class="searchButton"><img alt="Search" src="http://talks.taishinart.org.tw/pic/search-icon.png"></button>
+    </form>
+   </li>
+
+  </ul>
+</nav>
