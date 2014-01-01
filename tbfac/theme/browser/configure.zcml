@@ -28,7 +28,7 @@
 
   <browser:page
       for="*"
-      class=".homepage.Homepage"
+      class=".custom.Homepage"
       name="homepage"
       template="homepage.pt"
       permission="zope2.View"
