@@ -1,14 +1,22 @@
 <configure
-    xmlns="http://namespaces.zope.org/zope"
-    xmlns:five="http://namespaces.zope.org/five"
-    xmlns:cmf="http://namespaces.zope.org/cmf"
-    xmlns:i18n="http://namespaces.zope.org/i18n"
-    i18n_domain="tbfac.theme">
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:five="http://namespaces.zope.org/five"
+  xmlns:cmf="http://namespaces.zope.org/cmf"
+  xmlns:i18n="http://namespaces.zope.org/i18n"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  i18n_domain="tbfac.theme">
 
   <five:registerPackage package="." initialize=".initialize" />
   <include package=".browser" />
   <include file="skins.zcml" />
   <include file="profiles.zcml" />
   <i18n:registerTranslations directory="locales" />
+
+  <!-- Zope 3 browser resources -->
+
+  <browser:resourceDirectory
+    name="tbfac.theme"
+    directory="resources"
+    layer=".interfaces.IThemeSpecific" />
 
 </configure>

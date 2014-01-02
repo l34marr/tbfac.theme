@@ -5,7 +5,7 @@ from Acquisition import aq_inner
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 
-from tbfac.theme.browser.interfaces import IHomepage
+from tbfac.theme.interfaces import IHomepage
 
 
 class Homepage(BrowserView):

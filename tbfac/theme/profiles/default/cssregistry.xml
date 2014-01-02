@@ -23,7 +23,7 @@
       ResourceRegistries/tools/CSSRegistry.py for the latest list of all
       available keys and default values.
       -->
- <stylesheet id="++resource++tbfac.theme.static/main.css"
+ <stylesheet id="++resource++tbfac.theme/main.css"
     title=""
     media="screen" rel="stylesheet" rendering="import"
     cacheable="True" compression="safe" cookable="True"

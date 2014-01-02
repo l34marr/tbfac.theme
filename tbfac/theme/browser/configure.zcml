@@ -11,7 +11,7 @@
   -->
 
   <interface
-    interface=".interfaces.IThemeSpecific"
+    interface="..interfaces.IThemeSpecific"
     type="zope.publisher.interfaces.browser.IBrowserSkinType"
     name="TaiShin" />
   
@@ -19,7 +19,7 @@
     name="plone.global_sections"
     manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
     template="sections.pt"
-    layer=".interfaces.IThemeSpecific"
+    layer="..interfaces.IThemeSpecific"
     permission="zope2.View" />
 
   <browser:page
@@ -28,18 +28,5 @@
     name="homepage"
     template="homepage.pt"
     permission="zope2.View" />
-
-  <!-- Zope 3 browser resources -->
-
-  <!-- Resource directory for stylesheets or images
-    See tbfac/theme/browser/static/README.txt
-    for more information about registering stylesheets as Zope 3 browser
-    resources.
-  -->
-
-  <browser:resourceDirectory
-    name="tbfac.theme.static"
-    directory="static"
-    layer=".interfaces.IThemeSpecific" />
 
 </configure>
