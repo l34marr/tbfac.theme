@@ -22,6 +22,14 @@
     layer="..interfaces.IThemeSpecific"
     permission="zope2.View" />
 
+  <browser:viewlet
+    name="plone.personal_bar"
+    manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+    class="plone.app.layout.viewlets.common.PersonalBarViewlet"
+    template="personal_bar.pt"
+    layer="..interfaces.IThemeSpecific"
+    permission="zope2.View" />
+
   <browser:page
     for="*"
     class=".custom.Homepage"
