@@ -199,7 +199,7 @@ $(document).ready(function(){
 <div class="box nominator-color nominator"
  tal:define="items python: view.latest_review('whw');
              tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/whw"><img src="juries/whw/portrait" alt="" /></a>
+  <a href="http://talks.taishinart.org.tw/juries/whw"><img src="++resource++tbfac.theme/whw.jpg" alt="" /></a>
   <h2 class="box-title">王浩威 | 最新評論</h2>
   <div class="box-info">
   <a href="#"
@@ -225,7 +225,7 @@ $(document).ready(function(){
 <div class="box nominator-color nominator"
  tal:define="items python: view.latest_review('ljs');
              tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/ljs"><img src="juries/ljs/portrait" alt="" /></a>
+  <a href="http://talks.taishinart.org.tw/juries/ljs"><img src="++resource++tbfac.theme/ljs.jpg" alt="" /></a>
   <h2 class="box-title">李俊賢 | 最新評論</h2>
   <div class="box-info">
   <a href="#"
@@ -302,8 +302,7 @@ $(document).ready(function(){
 <div class="box nominator-color nominator"
  tal:define="items python: view.latest_review('cts');
              tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/cts">
-  <img src="juries/cts/portrait" alt="" /></a>
+  <a href="http://talks.taishinart.org.tw/juries/cts"><img src="++resource++tbfac.theme/cts.jpg" alt="" /></a>
   <h2 class="box-title">陳泰松 | 最新評論</h2>
   <div class="box-info">
   <a href="#"
@@ -315,8 +314,7 @@ $(document).ready(function(){
 <div class="box nominator-color nominator"
  tal:define="items python: view.latest_review('lyp');
              tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/lyp">
-  <img src="juries/lyp/portrait" alt="" /></a>
+  <a href="http://talks.taishinart.org.tw/juries/lyp"><img src="++resource++tbfac.theme/lyp.jpg" alt="" /></a>
   <h2 class="box-title">林于竝 | 最新評論</h2>
   <div class="box-info">
   <a href="#"
@@ -328,8 +326,7 @@ $(document).ready(function(){
 <div class="box nominator-color nominator"
  tal:define="items python: view.latest_review('jhl');
              tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/jhl">
-  <img src="juries/jhl/portrait" alt="" /></a>
+  <a href="http://talks.taishinart.org.tw/juries/jhl"><img src="++resource++tbfac.theme/jhl.jpg" alt="" /></a>
   <h2 class="box-title">紀慧玲(第三、四季委員) | 最新評論</h2>
   <div class="box-info">
   <a href="#"
@@ -354,8 +351,7 @@ $(document).ready(function(){
 <div class="box nominator-color nominator"
  tal:define="items python: view.latest_review('hyf');
              tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/hyf">
-  <img src="juries/hyf/portrait" alt=" " /></a>
+  <a href="http://talks.taishinart.org.tw/juries/hyf"><img src="++resource++tbfac.theme/hyf.jpg" alt=" " /></a>
   <h2 class="box-title">胡永芬 | 最新評論</h2>
   <div class="box-info">
   <a href="#"
@@ -380,8 +376,7 @@ $(document).ready(function(){
 <div class="box nominator-color nominator"
  tal:define="items python: view.latest_review('chj');
              tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/chj">
-  <img src="juries/chj/portrait" alt="" /></a>
+  <a href="http://talks.taishinart.org.tw/juries/chj"><img src="++resource++tbfac.theme/chj.jpg" alt="" /></a>
   <h2 class="box-title">陳漢金 | 最新評論</h2>
   <div class="box-info">
   <a href="#"
@@ -419,8 +414,7 @@ $(document).ready(function(){
 <div class="box nominator-color nominator"
  tal:define="items python: view.latest_review('ljy');
              tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/ljy">
-  <img src="juries/ljy/portrait" alt="" /></a>
+  <a href="http://talks.taishinart.org.tw/juries/ljy"><img src="++resource++tbfac.theme/ljy.jpg" alt="" /></a>
   <h2 class="box-title">盧健英(第一、二季委員) | 最新評論</h2>
   <div class="box-info">
   <a href="#"
