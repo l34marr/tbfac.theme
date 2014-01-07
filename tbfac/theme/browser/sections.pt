@@ -12,9 +12,8 @@
    <li class="">
     <a class="rootmenulink parent"  href="#" tal:attributes="href string:${root_url}/juries/current">提名觀察人<span class="eng-info" style="cursor: default">Nominators</span></a>     
     <ul class="submenu">
-     <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/juries/current">現任(第十三屆)</a></li>
-     <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/juries/2013">第十二屆</a></li>
-     <!--    <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/juries/past">歷屆</a> </li>    -->
+     <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/juries/current">第十三屆 (2014)</a></li>
+     <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/juries/2013">第十二屆 (2013)</a></li>
     </ul>
    </li>
 
