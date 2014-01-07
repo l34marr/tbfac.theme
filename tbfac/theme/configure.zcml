@@ -13,10 +13,13 @@
   <i18n:registerTranslations directory="locales" />
 
   <!-- Zope 3 browser resources -->
-
   <browser:resourceDirectory
     name="tbfac.theme"
     directory="resources"
     layer=".interfaces.IThemeSpecific" />
+
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+    directory="overrides" />
 
 </configure>

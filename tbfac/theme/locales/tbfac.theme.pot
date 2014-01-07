@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-03-09 13:19+0000\n"
+"POT-Creation-Date: 2014-01-07 03:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,28 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: tbfac.theme\n"
 
-#: ./browser/homepage.pt:110
+#: ./browser/homepage.pt:115
 msgid "All"
 msgstr ""
 
-#: ./browser/homepage.pt:113
+#: ./browser/homepage.pt:118
 msgid "Award+"
 msgstr ""
 
-#: ./browser/homepage.pt:111
+#: ./browser/homepage.pt:116
 msgid "Events"
 msgstr ""
 
-#: ./browser/homepage.pt:112
+#: ./browser/homepage.pt:117
 msgid "Juries"
 msgstr ""
 
-#: ./browser/homepage.pt:109
-msgid "Last Review:"
+#: ./overrides/collective.addthis.addthis.pt:7
+msgid "Share"
+msgstr ""
+
+#. Default: "Visits"
+#: ./overrides/collective.addthis.addthis.pt:23
+msgid "v_counts"
 msgstr ""
 
