@@ -131,7 +131,7 @@ $(document).ready(function(){
                     
                   <!-- Tiles Begin Here -->
                                   
-<div class="box event-color event"
+<div class="box event-color event" style="background-color: #cc0000;"
  tal:define="tile python: fixed[0].getObject()">
   <a href="#"
    tal:attributes="href tile/url">
