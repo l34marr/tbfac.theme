@@ -17,12 +17,14 @@
   </tal:chicklet-block>
 
   <!-- v_counts display begin -->
+<!--
   <span class="addthis_separator">|</span>
   <tal:v-counts define="v_counts context/v_counts|string:0;
                         fb_counts context/fb_counts|string:0">
     <tal:field i18n:translate="v_counts">Visits</tal:field>:
     <span tal:replace="python:int(v_counts) + int(fb_counts)" />
   </tal:v-counts>
+-->
   <!-- v_counts display end -->
 
 </div>
