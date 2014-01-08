@@ -1,5 +1,5 @@
 <nav id="mainMenu" class="tencol last">
- <a class="toggleMenu" href="#" style="display: none;">Menu <span class="expandicon"><img src="http://talks.taishinart.org.tw/pic/menu-expand.png"></span></a>
+ <a class="toggleMenu" href="#" style="display: none;">Menu <span class="expandicon"><img src="++resource++tbfac.theme/menu-expand.png"></span></a>
   <ul class="nav"
    tal:define="root_url context/@@plone_portal_state/navigation_root_url;
                isAnon context/@@plone_portal_state/anonymous" >
@@ -35,7 +35,7 @@
    <li id="mini-searchbox" class="displayNav">
     <form action="http://talks.taishinart.org.tw/search" name="searchform">
      <input type="text" class="searchField inputLabel inputLabelActive" title="Search" value="" size="18" name="SearchableText">
-     <button value="label_search" type="submit" class="searchButton"><img alt="Search" src="http://talks.taishinart.org.tw/pic/search-icon.png"></button>
+     <button value="label_search" type="submit" class="searchButton"><img alt="Search" src="++resource++tbfac.theme/search-icon.png"></button>
     </form>
    </li>
 
