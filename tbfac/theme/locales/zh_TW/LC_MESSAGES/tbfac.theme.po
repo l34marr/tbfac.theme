@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tbfac.theme\n"
-"POT-Creation-Date: 2014-01-07 03:00+0000\n"
-"PO-Revision-Date: 2014-01-07 11:01+0800\n"
+"POT-Creation-Date: 2014-01-16 09:57+0000\n"
+"PO-Revision-Date: 2014-01-16 17:58+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone I18N <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -29,13 +29,4 @@ msgstr "藝術動態"
 #: ./browser/homepage.pt:117
 msgid "Juries"
 msgstr "提名觀察人"
-
-#: ./overrides/collective.addthis.addthis.pt:7
-msgid "Share"
-msgstr "分享"
-
-#. Default: "Visits"
-#: ./overrides/collective.addthis.addthis.pt:23
-msgid "v_counts"
-msgstr "瀏覽數"
 
