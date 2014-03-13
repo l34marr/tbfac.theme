@@ -24,7 +24,6 @@
      <li class="menuitem"><a class="menulink" href="http://www.taishinart.org.tw/chinese/2_taishinarts_award/3_award_review.php?MID=3" target="_blank">歷屆</a> </li>
      <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/award/about">關於台新藝術獎</a> </li>
      <li class="menuitem"><a class="menulink" href="http://www.taishinart.org.tw/chinese/2_taishinarts_award/6_page_sub.php?MID=7" target="_blank">台北愛樂藝術相對論</a> </li>
-     <li class="menuitem"><a class="menulink" href="http://www.taishinart.org.tw/chinese/2_taishinarts_award/4_commentary_list.php?MID=4" target="_blank">藝評專區</a> </li>
      <li class="menuitem"><a class="menulink" href="http://www.taishinart.org.tw/chinese/2_taishinarts_award/5_famous_list.php?MID=5" target="_blank">台新名人榜</a> </li>
     </ul>
    </li>
