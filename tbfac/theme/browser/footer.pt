@@ -1,0 +1,15 @@
+<div metal:define-macro="portal_footer"
+ id="portal-footer" class="row"
+ i18n:domain="plone">
+
+<div class="footer-info">
+<div class="qrcode"><img src="++resource++tbfac.theme/qr-code.png" alt="" /></div>
+<div class="ts-logo"><a href="http://www.taishinart.org.tw/" target="blank"><img src="++resource++tbfac.theme/ts-foundation.png" alt="" /></a></div>
+版權所有©台新銀行文化藝術基金會<br>
+<div class="contactinfo"> <span class="ts-address">地址：台北市仁愛路四段118號15樓</span> <span class="ts-phone"> 電話： 02-3707-6955</span>  <span class="e-mail" ><a href="mailto:info@taishinart.org.tw">聯絡我們</a></span>  <span class="help" ><a href="http://talks.taishinart.org.tw/help">網站功能說明</a></span></div>
+<br />
+<span class="suggest-info">建議使用瀏覽器IE9.0、Firefox20.0或Chrome26.0以上版本，瀏覽解析度 1024x768以上</span>
+</div>
+
+<div class="tsholding"><img src="++resource++tbfac.theme/ts-holdings.png" alt="特別感謝台新社會公益信託基金" /></div>
+</div>
