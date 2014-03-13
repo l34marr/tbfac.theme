@@ -131,17 +131,8 @@ $(document).ready(function(){
                     
                   <!-- Tiles Begin Here -->
                                   
-<div class="box event-color event" style="background-color: #cc0000;"
- tal:define="tile python: fixed[0].getObject()">
-  <a href="#"
-   tal:attributes="href tile/url">
-  <img src="#" alt=""
-   tal:attributes="src string:${tile/absolute_url}/@@download/image;
-                   alt string:${tile/Title};
-                   width string:230" /></a>
-  <div class="box-date" tal:content="tile/above">Text</div>
-  <h2 class="box-title" tal:content="tile/Title">Text</h2>
-  <div class="box-info" tal:content="tile/Description">Text</div>
+<div class="box event-color event" style="background-color: #cc0000;">
+<tal:slider tal:content="structure context/../fixed/@@slider_util/render_inline" />
 </div>
 
 <div class="box event-color event"
@@ -197,15 +188,15 @@ $(document).ready(function(){
 </div>
                     
 <div class="box nominator-color nominator"
- tal:define="items python: view.latest_review('whw');
+ tal:define="items python: view.latest_review('ljs');
              tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/whw"><img src="++resource++tbfac.theme/whw.jpg" alt="" /></a>
-  <h2 class="box-title">王浩威 | 最新評論</h2>
+  <a href="http://talks.taishinart.org.tw/juries/ljs"><img src="++resource++tbfac.theme/ljs.jpg" alt="" /></a>
+  <h2 class="box-title">李俊賢 | 最新評論</h2>
   <div class="box-info">
   <a href="#"
    tal:attributes="href tile/absolute_url"
    tal:content="tile/Title">Text</a><br>
-  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/whw"><img src="pic/more_normal.png"></a></span></div>
+  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/ljs"><img src="pic/more_normal.png"></a></span></div>
 </div>
                     
 <div class="box others-color others"
@@ -223,15 +214,15 @@ $(document).ready(function(){
 </div>
                     
 <div class="box nominator-color nominator"
- tal:define="items python: view.latest_review('ljs');
+ tal:define="items python: view.latest_review('ccy');
              tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/ljs"><img src="++resource++tbfac.theme/ljs.jpg" alt="" /></a>
-  <h2 class="box-title">李俊賢 | 最新評論</h2>
+  <a href="http://talks.taishinart.org.tw/juries/ccy"><img src="++resource++tbfac.theme/ccy.jpg" alt="" /></a>
+  <h2 class="box-title">邱誌勇 | 最新評論</h2>
   <div class="box-info">
   <a href="#"
    tal:attributes="href tile/absolute_url"
    tal:content="tile/Title">Text</a><br>
-  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/ljs"><img src="pic/more_normal.png"></a></span></div>
+  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/ccy"><img src="pic/more_normal.png"></a></span></div>
 </div>
 
 <div class="box event-color event"
@@ -300,39 +291,39 @@ $(document).ready(function(){
 </div>
                     
 <div class="box nominator-color nominator"
- tal:define="items python: view.latest_review('cts');
-             tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/cts"><img src="++resource++tbfac.theme/cts.jpg" alt="" /></a>
-  <h2 class="box-title">陳泰松 | 最新評論</h2>
-  <div class="box-info">
-  <a href="#"
-   tal:attributes="href tile/absolute_url"
-   tal:content="tile/Title">Text</a><br>
-  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/cts"><img src="pic/more_normal.png"></a></span></div>
-</div>
-
-<div class="box nominator-color nominator"
- tal:define="items python: view.latest_review('lyp');
-             tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/lyp"><img src="++resource++tbfac.theme/lyp.jpg" alt="" /></a>
-  <h2 class="box-title">林于竝 | 最新評論</h2>
-  <div class="box-info">
-  <a href="#"
-   tal:attributes="href tile/absolute_url"
-   tal:content="tile/Title">Text</a><br>
-  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/lyp"><img src="pic/more_normal.png"></a></span></div>
-</div>
-
-<div class="box nominator-color nominator"
  tal:define="items python: view.latest_review('jhl');
              tile python: items[0].getObject()">
   <a href="http://talks.taishinart.org.tw/juries/jhl"><img src="++resource++tbfac.theme/jhl.jpg" alt="" /></a>
-  <h2 class="box-title">紀慧玲(第三、四季委員) | 最新評論</h2>
+  <h2 class="box-title">紀慧玲 | 最新評論</h2>
+  <div class="box-info">
+  <a href="#"
+   tal:attributes="href tile/absolute_url"
+   tal:content="tile/Title">Text</a><br>
+  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/jhl"><img src="pic/more_normal.png"></a></span></div>
+</div>
+
+<div class="box nominator-color nominator"
+ tal:define="items python: view.latest_review('chh');
+             tile python: items[0].getObject()">
+  <a href="http://talks.taishinart.org.tw/juries/chh"><img src="++resource++tbfac.theme/chh.jpg" alt="" /></a>
+  <h2 class="box-title">張小虹 | 最新評論</h2>
+  <div class="box-info">
+  <a href="#"
+   tal:attributes="href tile/absolute_url"
+   tal:content="tile/Title">Text</a><br>
+  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/chh"><img src="pic/more_normal.png"></a></span></div>
+</div>
+
+<div class="box nominator-color nominator"
+ tal:define="items python: view.latest_review('klt');
+             tile python: items[0].getObject()">
+  <a href="http://talks.taishinart.org.tw/juries/klt"><img src="++resource++tbfac.theme/klt.jpg" alt="" /></a>
+  <h2 class="box-title">郭亮廷 | 最新評論</h2>
   <div class="box-info">
   <a href="#"
    tal:attributes="href tile/absolute_url"
    tal:content="tile/Title">Text</a><br />
-  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/jhl"><img src="pic/more_normal.png"></a></span></div>
+  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/klt"><img src="pic/more_normal.png"></a></span></div>
 </div>
 
 <div class="box event-color event"
@@ -349,15 +340,15 @@ $(document).ready(function(){
 </div>
                     
 <div class="box nominator-color nominator"
- tal:define="items python: view.latest_review('hyf');
+ tal:define="items python: view.latest_review('kcl');
              tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/hyf"><img src="++resource++tbfac.theme/hyf.jpg" alt=" " /></a>
-  <h2 class="box-title">胡永芬 | 最新評論</h2>
+  <a href="http://talks.taishinart.org.tw/juries/kcl"><img src="++resource++tbfac.theme/kcl.jpg" alt=" " /></a>
+  <h2 class="box-title">郭昭蘭 | 最新評論</h2>
   <div class="box-info">
   <a href="#"
    tal:attributes="href tile/absolute_url"
    tal:content="tile/Title">Text</a><br>
-  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/hyf"><img src="pic/more_normal.png"></a></span></div>
+  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/kcl"><img src="pic/more_normal.png"></a></span></div>
 </div>
                     
 <div class="box event-color event"
@@ -374,15 +365,15 @@ $(document).ready(function(){
 </div>
                     
 <div class="box nominator-color nominator"
- tal:define="items python: view.latest_review('chj');
+ tal:define="items python: view.latest_review('cts');
              tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/chj"><img src="++resource++tbfac.theme/chj.jpg" alt="" /></a>
-  <h2 class="box-title">陳漢金 | 最新評論</h2>
+  <a href="http://talks.taishinart.org.tw/juries/cts"><img src="++resource++tbfac.theme/cts.jpg" alt="" /></a>
+  <h2 class="box-title">陳泰松 | 最新評論</h2>
   <div class="box-info">
   <a href="#"
    tal:attributes="href tile/absolute_url"
    tal:content="tile/Title">Text</a><br>
-  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/chj"><img src="pic/more_normal.png"></a></span></div>
+  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/cts"><img src="pic/more_normal.png"></a></span></div>
 </div>
 
 <div class="box others-color others"
@@ -412,15 +403,28 @@ $(document).ready(function(){
 </div>
 
 <div class="box nominator-color nominator"
- tal:define="items python: view.latest_review('ljy');
+ tal:define="items python: view.latest_review('chj');
              tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/ljy"><img src="++resource++tbfac.theme/ljy.jpg" alt="" /></a>
-  <h2 class="box-title">盧健英(第一、二季委員) | 最新評論</h2>
+  <a href="http://talks.taishinart.org.tw/juries/chj"><img src="++resource++tbfac.theme/chj.jpg" alt="" /></a>
+  <h2 class="box-title">陳漢金 | 最新評論</h2>
   <div class="box-info">
   <a href="#"
    tal:attributes="href tile/absolute_url"
    tal:content="tile/Title">Text</a><br>
-  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/ljy"><img src="pic/more_normal.png"></a></span></div>
+  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/chj"><img src="pic/more_normal.png"></a></span></div>
+</div>
+
+<div class="box nominator-color nominator"
+ tal:define="items python: view.latest_review('ccf')">
+  <a href="http://talks.taishinart.org.tw/juries/ccf"><img src="++resource++tbfac.theme/ccf.jpg" alt="" /></a>
+  <h2 class="box-title">趙綺芳 | 最新評論</h2>
+  <div class="box-info"
+   tal:condition="items"
+   tal:define="tile python: items and items[0].getObject()">
+  <a href="#"
+   tal:attributes="href tile/absolute_url"
+   tal:content="tile/Title">Text</a><br>
+  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/ccf"><img src="pic/more_normal.png"></a></span></div>
 </div>
 
 <div class="box event-color event"
