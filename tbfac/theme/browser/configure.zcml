@@ -45,4 +45,10 @@
     template="homepage.pt"
     permission="zope2.View" />
 
+  <browser:page
+    name="ckeditor_view"
+    for="*"
+    layer="..interfaces.IThemeSpecific"
+    class=".ckeditorview.CKeditorView"
+    permission="zope.Public" />
 </configure>
