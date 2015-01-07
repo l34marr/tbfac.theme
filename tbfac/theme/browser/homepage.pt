@@ -139,10 +139,14 @@ $(document).ready(function(){
  tal:define="tile python: infos[0].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
-  <img src="" alt=""
+  <img src="" alt="" tal:condition="python:tile.image != None"
    tal:attributes="src string:${tile/absolute_url}/@@download/image;
                    alt string: ;
-                   width string:230" /></a>
+                   width string:230" />
+  <img tal:condition="python:tile.image == None"
+   src="++resource++tbfac.theme/img/default1.gif" width="230" />
+  </a>
+
   <div class="box-date"><tal:start content="tile/startDate">Start</tal:start> - <tal:end content="tile/endDate">End</tal:end></div>
   <h2 class="box-title" tal:content="tile/Title">Text</h2>
   <div class="box-info" tal:content="tile/Description">Text</div>
@@ -152,10 +156,13 @@ $(document).ready(function(){
  tal:define="tile python: infos[1].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
-  <img src="" alt=""
+  <img src="" alt="" tal:condition="python:tile.image != None"
    tal:attributes="src string:${tile/absolute_url}/@@download/image;
                    alt string: ;
-                   width string:230" /></a>
+                   width string:230" />
+  <img tal:condition="python:tile.image == None"
+   src="++resource++tbfac.theme/img/default2.gif" width="230" />
+  </a>
   <div class="box-date"><tal:start content="tile/startDate">Start</tal:start> - <tal:end content="tile/endDate">End</tal:end></div>
   <h2 class="box-title" tal:content="tile/Title">Text</h2>
   <div class="box-info" tal:content="tile/Description">Text</div>
@@ -229,10 +236,13 @@ $(document).ready(function(){
  tal:define="tile python: infos[2].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
-  <img src="" alt=""
+  <img src="" alt="" tal:condition="python:tile.image != None"
    tal:attributes="src string:${tile/absolute_url}/@@download/image;
                    alt string: ;
-                   width string:230" /></a>
+                   width string:230" />
+  <img tal:condition="python:tile.image == None"
+   src="++resource++tbfac.theme/img/default3.gif" width="230" />
+  </a>
   <div class="box-date"><tal:start content="tile/startDate">Start</tal:start> - <tal:end content="tile/endDate">End</tal:end></div>
   <h2 class="box-title" tal:content="tile/Title">Text</h2>
   <div class="box-info" tal:content="tile/Description">Text</div>
@@ -242,10 +252,13 @@ $(document).ready(function(){
  tal:define="tile python: infos[3].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
-  <img src="" alt=""
+  <img src="" alt="" tal:condition="python:tile.image != None"
    tal:attributes="src string:${tile/absolute_url}/@@download/image;
                    alt string: ;
-                   width string:230" /></a>
+                   width string:230" />
+  <img tal:condition="python:tile.image == None"
+   src="++resource++tbfac.theme/img/default1.gif" width="230" />
+  </a>
   <div class="box-date"><tal:start content="tile/startDate">Start</tal:start> - <tal:end content="tile/endDate">End</tal:end></div>
   <h2 class="box-title" tal:content="tile/Title">Text</h2>
   <div class="box-info" tal:content="tile/Description">Text</div>
@@ -268,15 +281,18 @@ $(document).ready(function(){
  tal:define="tile python: infos[4].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
-  <img src="" alt=""
+  <img src="" alt="" tal:condition="python:tile.image != None"
    tal:attributes="src string:${tile/absolute_url}/@@download/image;
                    alt string: ;
-                   width string:230" /></a>
+                   width string:230" />
+  <img tal:condition="python:tile.image == None"
+   src="++resource++tbfac.theme/img/default2.gif" width="230" />
+  </a>
   <div class="box-date"><tal:start content="tile/startDate">Start</tal:start> - <tal:end content="tile/endDate">End</tal:end></div>
   <h2 class="box-title" tal:content="tile/Title">Text</h2>
   <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
-                    
+
 <div class="box others-color others"
  tal:define="tile python: fixed[5].getObject()">
   <a href="#"
@@ -289,7 +305,7 @@ $(document).ready(function(){
   <h2 class="box-title" tal:content="tile/Title">Text</h2>
   <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
-                    
+
 <div class="box nominator-color nominator"
  tal:define="items python: view.latest_review('jhl');
              tile python: items[0].getObject()">
@@ -330,19 +346,22 @@ $(document).ready(function(){
  tal:define="tile python: infos[5].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
-  <img src="" alt=""
+  <img src="" alt="" tal:condition="python:tile.image != None"
    tal:attributes="src string:${tile/absolute_url}/@@download/image;
                    alt string: ;
-                   width string:230" /></a>
+                   width string:230" />
+  <img tal:condition="python:tile.image == None"
+   src="++resource++tbfac.theme/img/default3.gif" width="230" />
+  </a>
   <div class="box-date"><tal:start content="tile/startDate">Start</tal:start> - <tal:end content="tile/endDate">End</tal:end></div>
   <h2 class="box-title" tal:content="tile/Title">Text</h2>
   <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
-                    
+
 <div class="box nominator-color nominator"
  tal:define="items python: view.latest_review('kcl');
              tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/kcl"><img src="++resource++tbfac.theme/kcl.jpg" alt=" " /></a>
+  <a href="http://talks.taishinart.org.tw/juries/kcl"><img src="++resource++tbfac.theme/kcl.jpg" alt="" /></a>
   <h2 class="box-title">郭昭蘭 | 最新評論</h2>
   <div class="box-info">
   <a href="#"
@@ -350,20 +369,23 @@ $(document).ready(function(){
    tal:content="tile/Title">Text</a><br>
   <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/kcl"><img src="pic/more_normal.png"></a></span></div>
 </div>
-                    
+
 <div class="box event-color event"
  tal:define="tile python: infos[6].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
-  <img src="" alt=""
+  <img src="" alt="" tal:condition="python:tile.image != None"
    tal:attributes="src string:${tile/absolute_url}/@@download/image;
                    alt string: ;
-                   width string:230" /></a>
+                   width string:230" />
+  <img tal:condition="python:tile.image == None"
+   src="++resource++tbfac.theme/img/default1.gif" width="230" />
+  </a>
   <div class="box-date"><tal:start content="tile/startDate">Start</tal:start> - <tal:end content="tile/endDate">End</tal:end></div>
   <h2 class="box-title" tal:content="tile/Title">Text</h2>
   <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
-                    
+
 <div class="box nominator-color nominator"
  tal:define="items python: view.latest_review('cts');
              tile python: items[0].getObject()">
@@ -393,10 +415,13 @@ $(document).ready(function(){
  tal:define="tile python: infos[7].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
-  <img src="" alt=""
+  <img src="" alt="" tal:condition="python:tile.image != None"
    tal:attributes="src string:${tile/absolute_url}/@@download/image;
                    alt string: ;
-                   width string:230" /></a>
+                   width string:230" />
+  <img tal:condition="python:tile.image == None"
+   src="++resource++tbfac.theme/img/default2.gif" width="230" />
+  </a>
   <div class="box-date"><tal:start content="tile/startDate">Start</tal:start> - <tal:end content="tile/endDate">End</tal:end></div>
   <h2 class="box-title" tal:content="tile/Title">Text</h2>
   <div class="box-info" tal:content="tile/Description">Text</div>
@@ -431,10 +456,13 @@ $(document).ready(function(){
  tal:define="tile python: infos[8].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
-  <img src="" alt=""
+  <img src="" alt="" tal:condition="python:tile.image != None"
    tal:attributes="src string:${tile/absolute_url}/@@download/image;
                    alt string: ;
-                   width string:230" /></a>
+                   width string:230" />
+  <img tal:condition="python:tile.image == None"
+   src="++resource++tbfac.theme/img/default3.gif" width="230" />
+  </a>
   <div class="box-date"><tal:start content="tile/startDate">Start</tal:start> - <tal:end content="tile/endDate">End</tal:end></div>
   <h2 class="box-title" tal:content="tile/Title">Text</h2>
   <div class="box-info" tal:content="tile/Description">Text</div>
@@ -444,10 +472,13 @@ $(document).ready(function(){
  tal:define="tile python: infos[9].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
-  <img src="" alt=""
+  <img src="" alt="" tal:condition="python:tile.image != None"
    tal:attributes="src string:${tile/absolute_url}/@@download/image;
                    alt string: ;
-                   width string:230" /></a>
+                   width string:230" />
+  <img tal:condition="python:tile.image == None"
+   src="++resource++tbfac.theme/img/default1.gif" width="230" />
+  </a>
   <div class="box-date"><tal:start content="tile/startDate">Start</tal:start> - <tal:end content="tile/endDate">End</tal:end></div>
   <h2 class="box-title" tal:content="tile/Title">Text</h2>
   <div class="box-info" tal:content="tile/Description">Text</div>
@@ -457,10 +488,13 @@ $(document).ready(function(){
  tal:define="tile python: infos[10].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
-  <img src="" alt=""
+  <img src="" alt="" tal:condition="python:tile.image != None"
    tal:attributes="src string:${tile/absolute_url}/@@download/image;
                    alt string: ;
-                   width string:230" /></a>
+                   width string:230" />
+  <img tal:condition="python:tile.image == None"
+   src="++resource++tbfac.theme/img/default2.gif" width="230" />
+  </a>
   <div class="box-date"><tal:start content="tile/startDate">Start</tal:start> - <tal:end content="tile/endDate">End</tal:end></div>
   <h2 class="box-title" tal:content="tile/Title">Text</h2>
   <div class="box-info" tal:content="tile/Description">Text</div>
@@ -470,10 +504,13 @@ $(document).ready(function(){
  tal:define="tile python: infos[11].getObject()">
   <a href="#"
    tal:attributes="href tile/absolute_url">
-  <img src="" alt=""
+  <img src="" alt="" tal:condition="python:tile.image != None"
    tal:attributes="src string:${tile/absolute_url}/@@download/image;
                    alt string: ;
-                   width string:230" /></a>
+                   width string:230" />
+  <img tal:condition="python:tile.image == None"
+   src="++resource++tbfac.theme/img/default3.gif" width="230" />
+  </a>
   <div class="box-date"><tal:start content="tile/startDate">Start</tal:start> - <tal:end content="tile/endDate">End</tal:end></div>
   <h2 class="box-title" tal:content="tile/Title">Text</h2>
   <div class="box-info" tal:content="tile/Description">Text</div>
@@ -492,7 +529,7 @@ $(document).ready(function(){
   <h2 class="box-title" tal:content="tile/Title">Text</h2>
   <div class="box-info" tal:content="tile/Description">Text</div>
 </div>
-                     
+
 <div class="box others-color others"
  tal:define="tile python: fixed[8].getObject()">
   <a href="#"
