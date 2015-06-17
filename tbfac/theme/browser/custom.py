@@ -38,7 +38,7 @@ class Homepage(BrowserView):
         return catalog(portal_type='tbfac.Info',
                        review_state='published',
                        path=path,
-                       sort_on='created',
+                       sort_on='effective',
                        sort_order='descending',
                        sort_limit=12)[:12]
 
