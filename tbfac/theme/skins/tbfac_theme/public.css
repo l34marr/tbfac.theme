@@ -179,9 +179,15 @@ width: 100%;
     /*-moz-border-radius-bottomleft: 0.5em;*/
     /*-moz-border-radius-bottomright: 0.5em;*/
 }
+
 #portal-personaltools #anon-personalbar a {
     float: left;
     margin: 0 0.5em;
+    line-height: 13px;
+}
+
+#portal-personaltools #anon-personalbar a#personaltools-login_facebook {
+    margin:0px 0px;
 }
 
 #portal-languageselector {
