@@ -17,7 +17,9 @@
     <ul>
         <li tal:repeat="action view/user_actions"
             tal:attributes="id string:personaltools-${action/id}">
-<tal:isManager condition="python:True if 'Manager' in context.portal_membership.getAuthenticatedMember().getRoles() or action['id'] == 'logout' else False">
+ <tal:isManager condition="python:True if 'Manager' in context.portal_membership.getAuthenticatedMember().getRoles() or
+                                      action['id'] == 'logout' else False"> 
+
             <a href=""
                tal:attributes="href action/url;
                                target action/link_target|nothing"
@@ -25,7 +27,7 @@
                i18n:translate="">
                 action title
             </a>
-</tal:isManager>
+ </tal:isManager>
         </li>
     </ul>
   </dd>
@@ -59,4 +61,7 @@
    >台新銀行文化藝術基金會</a> |
 <a href="#"
    tal:attributes="href portal_url">首頁</a> |
+<a tal:condition="context/@@isAnonymous"
+   href="/@@facebookLogin">Facebook Login |</a>
+
 </div>
