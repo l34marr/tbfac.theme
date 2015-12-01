@@ -10,10 +10,9 @@
     <a class="rootmenulink" href="#" tal:attributes="href string:${root_url}/event/talks">藝論紛紛<span class="eng-info" style="cursor: default">Post Your Comment</span></a> 
    </li>
    <li class="">
-    <a class="rootmenulink parent"  href="#" tal:attributes="href string:${root_url}/juries">提名觀察人<span class="eng-info" style="cursor: default">Nominators</span></a>     
+    <a class="rootmenulink parent"  href="#" tal:attributes="href string:${root_url}/juries/current">提名觀察人<span class="eng-info" style="cursor: default">Nominators</span></a>     
     <ul class="submenu">
-     <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/juries/2015">第十四屆 (2015)</a></li>
-     <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/juries/2014">第十三屆 (2014)</a></li>
+     <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/juries/current">第十三屆 (2014)</a></li>
      <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/juries/2013">第十二屆 (2013)</a></li>
     </ul>
    </li>
@@ -21,20 +20,25 @@
    <li class=""><a class="rootmenulink parent"  href="#" tal:attributes="href string:${root_url}/award/about">台新藝術獎<span class="eng-info" style="cursor: default">Taishin Arts Award</span></a>     
     <ul class="submenu">
      <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/award/bulletin">佈告欄</a> </li>
-     <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/award/2015/current">第十四屆台新藝術獎</a> </li>
      <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/award/2014/current">第十三屆台新藝術獎</a> </li>
+     <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/award/2013/current">第十二屆台新藝術獎</a> </li>
      <li class="menuitem"><a class="menulink" href="http://www.taishinart.org.tw/chinese/2_taishinarts_award/3_award_review.php?MID=3" target="_blank">歷屆台新藝術獎</a> </li>
      <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/award/about">關於台新藝術獎</a> </li>
      <li class="menuitem"><a class="menulink" href="http://www.taishinart.org.tw/chinese/2_taishinarts_award/5_famous_list.php?MID=5" target="_blank">台新名人榜</a> </li>
     </ul>
    </li>
-   <li class=""><a class="rootmenulink parent"  href="#" tal:attributes="href string:${root_url}/atoki">身心靈快藝通<span class="eng-info" style="cursor: default">Atoki</span></a>
+
+   <li class="">
+    <a class="rootmenulink" href="#" tal:attributes="href string:${root_url}/atoki">身心靈快藝通<span class="eng-info" style="cursor: default">Atoki</span></a>
     <ul class="submenu">
      <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/atoki/month_talk">每月藝占</a> </li>
      <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/atoki/novel">奧奧巫異聞講堂</a> </li>
      <li class="menuitem"><a class="menulink" href="#" tal:attributes="href string:${root_url}/atoki/body_and_soul">（080靈）通話藝術家</a> </li>
     </ul>
+
    </li>
+
+
 
 
    <li class=""><a class="rootmenulink" href="#" tal:attributes="href string:${root_url}/forum">Art＆ _____<span class="eng-info" style="cursor: default">Forum</span></a>   
