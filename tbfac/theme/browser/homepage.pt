@@ -359,15 +359,15 @@ $(document).ready(function(){
 </div>
 
 <div class="box nominator-color nominator"
- tal:define="items python: view.latest_review('linp');
+ tal:define="items python: view.latest_review('lcm');
              tile python: items[0].getObject()">
-  <a href="http://talks.taishinart.org.tw/juries/linp"><img src="++resource++tbfac.theme/linp.jpg" alt="" /></a>
-  <h2 class="box-title">林平 | 最新評論</h2>
+  <a href="http://talks.taishinart.org.tw/juries/lcm"><img src="++resource++tbfac.theme/lcm.jpg" alt="" /></a>
+  <h2 class="box-title">林志明 | 最新評論</h2>
   <div class="box-info">
   <a href="#"
    tal:attributes="href tile/absolute_url"
    tal:content="tile/Title">Text</a><br>
-  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/linp"><img src="pic/more_normal.png"></a></span></div>
+  <span class="box-more"><a href="http://talks.taishinart.org.tw/juries/lcm"><img src="pic/more_normal.png"></a></span></div>
 </div>
 
 <div class="box event-color event"
