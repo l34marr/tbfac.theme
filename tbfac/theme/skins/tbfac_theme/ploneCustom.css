@@ -108,6 +108,11 @@ dl.portlet a:visited {
 #content-core ul {
     font-weight: normal;
 }
+
+#content-core ul {
+    margin-left: 0em;
+}
+
 #content-core p {
     /*font-size: 13px;*/
     font-weight: normal;
